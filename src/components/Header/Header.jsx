@@ -1,7 +1,10 @@
 
 import image from  '../../assets/images/logo.png'
 import { TbCoin } from "react-icons/tb";
-const Header = () => {
+import PropTypes from 'prop-types'
+
+
+const Header = ({coin}) => {
     return (
         <div>
             <div className='flex justify-between ml-10 mt-6 '>
@@ -14,7 +17,7 @@ const Header = () => {
                     <h3 className='text-center ml-8'>Schedule</h3>
                     </div>
                     <div className=' m-4 p-4 border-2 border-white bg-purple-100 rounded-2xl flex'>
-                        <h2 className='text-xl' > 60 Coin </h2>
+                        <h2 className='text-xl' > {coin} Coin </h2>
                         <h2 className='text-orange-400 ml-2  text-2xl'> <TbCoin></TbCoin> </h2> 
                     </div>
                    
@@ -26,4 +29,7 @@ const Header = () => {
     );
 };
 
+Header.propTypes={
+    coin: PropTypes.number.isRequired
+}
 export default Header;
