@@ -11,7 +11,7 @@ const Banner = ({handleCoin}) => {
             <div className='text-center'>
                 <h2 className='text-4xl text-white'>Assemble your Ultimate Dream 11 Cricket Team</h2>
                 <h3 className='text-2xl text-gray-200'>Beyond Boundaries Beyond Litmits</h3>
-                <button onClick={handleCoin} className=' p-3 rounded border-2 border-yellow-300 bg-yellow-500'> <span className='text-xl'>Claim Free Credit</span> </button>
+                <button onClick={handleCoin} className=' p-3 rounded border-2  bg-lime-400'> <span className='text-xl'>Claim Free Credit</span> </button>
              
 
             </div>
