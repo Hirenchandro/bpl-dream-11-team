@@ -1,14 +1,14 @@
 import { IoFlagSharp } from "react-icons/io5";
 import PropTypes from 'prop-types'
 
-const Player = ({player}) => {
-    const {image,name,country,player_role} = player;
+const Player = ({player,handleSelect}) => {
+    const {image,name,country,player_role,rating, batting_style,price} = player;
     return (
         <div>
-            <div className="w-56 p-2">
+            <div className="w-auto p-2">
                
                     <div className="">
-                        <img className="flex w-full" src={image} alt="" />
+                        <img className="flex w-full rounded-2xl" src={image} alt="" />
                 </div>
                 
                 
@@ -21,7 +21,18 @@ const Player = ({player}) => {
 
                  <hr/>
                  <div>
-                    <h1 className="font-semibold">Rating</h1>
+                  <div className="flex justify-between">
+                      <h1 className="font-semibold">Rating</h1>
+                      <h2>{rating}</h2>
+                  </div>
+                  <div className="flex justify-between">
+                    <h2>batting_style</h2>
+                    <h2>{batting_style}</h2>
+                  </div>
+                  <div className="flex justify-between">
+                    <h2>Price: ${price}</h2>
+                    <button onClick={()=>handleSelect(player)} className="border-2 bg-lime-200 p-1">Choose Player</button>
+                  </div>
 
                  </div>
             
@@ -30,7 +41,8 @@ const Player = ({player}) => {
     );
 };
 Player.propTypes={
-    player: PropTypes.object.isRequired
+    player: PropTypes.object.isRequired,
+    handleSelect: PropTypes.func
 }
 
 export default Player;
