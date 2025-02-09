@@ -7,7 +7,7 @@ const Selectplayer = ({selectPlayer}) => {
            <img className="w-40" src={image} alt="" />
            <h1>Name: {name}</h1>
            <h2>Price: ${price}</h2>
-           <button className='border-2 p-1 bg-lime-100'>Removed</button>
+           <button className='border-2 p-1 bg-lime-200'>Removed</button>
         </div>
     );
 };

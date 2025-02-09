@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import Player from "../Player/Player";
 import Selectplayer from "../Selectplayer/Selectplayer";
 import PropTypes from 'prop-types'
+import Subscribe from "../Subscribe/Subscribe";
+import imagesubscribe from '../../assets/images/bg-shadow.png'
+import Footer from "../Footer/Footer";
 
 
 const Availableplayers = ({handlePrice,coin}) => {
@@ -49,7 +52,7 @@ const Availableplayers = ({handlePrice,coin}) => {
               
             </div>
            <div className="border-2 m-56 mb-4 mt-2">
-            <h1 className="text-center font-bold text-3xl"> Selected Players: {selectPlayers.length} </h1>
+            <h1 className="text-center font-bold text-3xl bg-slate-200"> Selected Players: {selectPlayers.length} </h1>
              <div className="grid grid-cols-6 gap-4 m-56 mb-4 mt-4">
                
                 {
@@ -67,6 +70,14 @@ const Availableplayers = ({handlePrice,coin}) => {
                         ></Player>)
                 }
                </div>
+                 <div className="shadow-3xl mx-56 border-2 p-1 rounded-xl">
+                    <div className="w-full bg-center rounded-xl h-40 grid place-content-center" style={{backgroundImage:`url(${imagesubscribe}`}}>
+                    <Subscribe></Subscribe>
+                    </div>
+                </div>
+                <div className="bg-black mt-2 mx-56 rounded-xl">
+                    <Footer></Footer>
+                </div>
         </div>
     );
 };
